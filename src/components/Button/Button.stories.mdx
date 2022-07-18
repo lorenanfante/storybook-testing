@@ -1,0 +1,34 @@
+<!-- Button.stories.mdx-->
+
+import { Meta, Story } from '@storybook/addon-docs';
+import { action } from '@storybook/addon-actions'
+import Button from './index.vue';
+
+<Meta title="Button" component={Button} />
+
+<!-- 👇 We create a “template” of how args map to rendering -->
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Button },
+  template: `<Button :label="label" :type="type" :loading="loading" @click="myClickHandler"/>`,
+  methods:{
+    myClickHandler(args){
+      action('clicked button')(args)
+    }
+  }
+});
+
+<!-- 👇 Each story then reuses that template -->
+<Story
+  name="Primary"
+  args={{
+    type: 'secondary',
+    label: 'Button',
+    loading: false,
+  }}
+  argTypes={{ type: { control: {type: 'select', options: ['primary', 'secondary']}}}}>
+  {Template.bind({})}
+</Story>
+
+<ArgsTable story="Primary" />
