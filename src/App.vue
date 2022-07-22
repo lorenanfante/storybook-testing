@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <h1>Pelotas</h1>
-    <MyButton />
+    <DiegoButton />
+    <lore-button> Slot </lore-button>
+    <lore-button
+      text="text"
+      :color="green"
+    />
   </div>
 </template>
 
 <script>
-import MyButton from './components/Button/index.vue';
+import DiegoButton from './components/Button/index.vue';
+import LoreButton from './components/Button.vue';
 
 export default {
   name: 'App',
   components: {
-    MyButton,
+    DiegoButton,
+    LoreButton,
   },
 };
 </script>
