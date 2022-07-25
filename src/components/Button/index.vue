@@ -1,5 +1,8 @@
 <template>
-  <button :class="getBtnClass()" @click="clickButton">
+  <button
+    :class="getBtnClass()"
+    @click="clickButton"
+  >
     {{ loading ? 'Cargando' : label }}
   </button>
 </template>

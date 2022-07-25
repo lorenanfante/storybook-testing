@@ -30,6 +30,10 @@ export default {
       default: 'primary',
       required: true,
     },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
   },
 
 };
@@ -37,7 +41,7 @@ export default {
 
 <style>
   .primary{
-    background-color: #7432F9;
+    background-color: #88498F;
     padding: 10px;
     color: #FFFFFF;
     font-weight: 500;

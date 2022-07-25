@@ -11,7 +11,7 @@
 
 <script>
 import DiegoButton from './components/Button/index.vue';
-import LoreButton from './components/Button.vue';
+import LoreButton from './components/Button/Button.vue';
 
 export default {
   name: 'App',
