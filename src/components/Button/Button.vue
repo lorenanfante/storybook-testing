@@ -1,6 +1,8 @@
 <template>
-  <button class="primary">
-    {{ text }}
+  <button
+    class="primary"
+    @click="onClick"
+  >
     <span v-if="isLoading">
       Loading...
     </span>
@@ -34,6 +36,12 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  methods: {
+    onClick() {
+      return this.$emit('click');
+    },
+
   },
 
 };

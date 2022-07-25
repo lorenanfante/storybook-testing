@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <DiegoButton />
-    <lore-button> Slot </lore-button>
     <lore-button
       text="text"
       :color="green"
